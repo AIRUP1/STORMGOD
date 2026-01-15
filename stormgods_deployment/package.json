@@ -1,0 +1,19 @@
+{
+  "name": "stormgods",
+  "version": "1.0.0",
+  "description": "StormGod Web Application - Weather Damage Lead Generation",
+  "main": "app.py",
+  "scripts": {
+    "dev": "python app.py",
+    "start": "python app.py",
+    "build": "echo 'No build step required for Flask'"
+  },
+  "dependencies": {
+    "flask": "^2.3.0",
+    "flask-cors": "^4.0.0"
+  },
+  "engines": {
+    "python": "3.9"
+  }
+}
+

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StormBuster - Subscription Plans</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='subscription.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>StormBuster</span>
+            </div>
+            <div class="nav-actions">
+                <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                <a href="{{ url_for('register') }}" class="nav-link">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Choose Your StormBuster Plan</h1>
+                <h2 class="slogan">"Strike While the Storm Rages"</h2>
+                <p>Unlock the power of AI-driven storm damage lead generation with our flexible subscription plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Plans -->
+    <section class="ai-chat-plans">
+        <div class="container">
+            <h2>AI Chat Packages</h2>
+            <p class="section-subtitle">Choose your AI assistant level for storm damage analysis and lead generation</p>
+            
+            <div class="ai-pricing-grid">
+                <!-- Free Basic Plan -->
+                <div class="ai-pricing-card free">
+                    <div class="free-badge">Free Forever</div>
+                    <div class="plan-header">
+                        <h3><i class="fas fa-gift"></i> Free Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ChatGPT-3.5 Access</li>
+                            <li><i class="fas fa-check"></i> 100 AI Messages/Month</li>
+                            <li><i class="fas fa-check"></i> Basic Storm Analysis</li>
+                            <li><i class="fas fa-check"></i> Email Support</li>
+                            <li><i class="fas fa-check"></i> Basic Lead Generation</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="subscribe-btn free-btn" onclick="subscribeToPlan('ai_free')">
+                        <i class="fas fa-gift"></i>
+                        Get Free Plan
+                    </button>
+                </div>
+
+                <!-- Basic AI Plan - $40/month -->
+                <div class="ai-pricing-card">
+                    <div class="plan-header">
+                        <h3><i class="fas fa-robot"></i> Basic AI</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">40</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ChatGPT-3.5 Access</li>
+                            <li><i class="fas fa-check"></i> 1,000 AI Messages/Month</li>
+                            <li><i class="fas fa-check"></i> Basic Storm Analysis</li>
+                            <li><i class="fas fa-check"></i> Email Support</li>
+                            <li><i class="fas fa-check"></i> Enhanced Lead Generation</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="subscribe-btn" onclick="subscribeToPlan('ai_basic')">
+                        <i class="fas fa-robot"></i>
+                        Get Basic AI
+                    </button>
+                </div>
+
+                <!-- Professional AI Plan - $70/month -->
+                <div class="ai-pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3><i class="fas fa-brain"></i> Professional AI</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">70</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ChatGPT-4 Access</li>
+                            <li><i class="fas fa-check"></i> Claude-3 Access</li>
+                            <li><i class="fas fa-check"></i> 5,000 AI Messages/Month</li>
+                            <li><i class="fas fa-check"></i> Advanced Storm Analysis</li>
+                            <li><i class="fas fa-check"></i> Lead Scoring AI</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                            <li><i class="fas fa-check"></i> Custom Prompts</li>
+                            <li><i class="fas fa-check"></i> API Access</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="subscribe-btn" onclick="subscribeToPlan('ai_professional')">
+                        <i class="fas fa-brain"></i>
+                        Get Professional AI
+                    </button>
+                </div>
+
+                <!-- Unlimited Access Plan - $100/month -->
+                <div class="ai-pricing-card unlimited">
+                    <div class="unlimited-badge">Unlimited Access</div>
+                    <div class="plan-header">
+                        <h3><i class="fas fa-infinity"></i> Unlimited Access</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">100</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Unlimited AI Messages</li>
+                            <li><i class="fas fa-check"></i> All Premium Models</li>
+                            <li><i class="fas fa-check"></i> GPT-4 Turbo</li>
+                            <li><i class="fas fa-check"></i> Claude-3 Opus</li>
+                            <li><i class="fas fa-check"></i> Gemini Pro</li>
+                            <li><i class="fas fa-check"></i> AI-Powered Reports</li>
+                            <li><i class="fas fa-check"></i> Custom AI Training</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check"></i> White-label AI</li>
+                            <li><i class="fas fa-check"></i> Dedicated Support</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="subscribe-btn unlimited-btn" onclick="subscribeToPlan('ai_unlimited')">
+                        <i class="fas fa-infinity"></i>
+                        Get Unlimited Access
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Plans -->
+    <section class="pricing">
+        <div class="container">
+            <h2>StormBuster Lead Generation Plans</h2>
+            <p class="section-subtitle">Traditional subscription plans for storm damage lead generation</p>
+            
+            <div class="pricing-grid">
+                {% for plan_id, plan in plans.items() %}
+                <div class="pricing-card {{ 'featured' if plan_id == 'professional' else '' }}">
+                    {% if plan_id == 'professional' %}
+                    <div class="popular-badge">Most Popular</div>
+                    {% endif %}
+                    
+                    <div class="plan-header">
+                        <h3>{{ plan.name }}</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">{{ plan.price }}</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul>
+                            {% for feature in plan.features %}
+                            <li><i class="fas fa-check"></i> {{ feature }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-limits">
+                        <div class="limit-item">
+                            <span class="limit-label">Monthly Leads:</span>
+                            <span class="limit-value">
+                                {% if plan.limits.monthly_leads == -1 %}
+                                    Unlimited
+                                {% else %}
+                                    {{ "{:,}".format(plan.limits.monthly_leads) }}
+                                {% endif %}
+                            </span>
+                        </div>
+                        <div class="limit-item">
+                            <span class="limit-label">API Calls:</span>
+                            <span class="limit-value">
+                                {% if plan.limits.api_calls == -1 %}
+                                    Unlimited
+                                {% else %}
+                                    {{ "{:,}".format(plan.limits.api_calls) }}
+                                {% endif %}
+                            </span>
+                        </div>
+                        <div class="limit-item">
+                            <span class="limit-label">Exports:</span>
+                            <span class="limit-value">
+                                {% if plan.limits.export_downloads == -1 %}
+                                    Unlimited
+                                {% else %}
+                                    {{ plan.limits.export_downloads }}
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <button class="subscribe-btn" onclick="subscribeToPlan('{{ plan_id }}')">
+                        <i class="fas fa-credit-card"></i>
+                        Subscribe Now
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison -->
+    <section class="features-comparison">
+        <div class="container">
+            <h2>Compare All Features</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Free Basic<br>$0/mo</th>
+                            <th>Basic AI<br>$40/mo</th>
+                            <th>Professional AI<br>$70/mo</th>
+                            <th>Unlimited Access<br>$100/mo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI Models</td>
+                            <td>ChatGPT-3.5</td>
+                            <td>ChatGPT-3.5</td>
+                            <td>GPT-4 + Claude-3</td>
+                            <td>All Premium Models</td>
+                        </tr>
+                        <tr>
+                            <td>AI Messages/Month</td>
+                            <td>100</td>
+                            <td>1,000</td>
+                            <td>5,000</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Storm Analysis</td>
+                            <td>Basic</td>
+                            <td>Basic</td>
+                            <td>Advanced</td>
+                            <td>AI-Powered Reports</td>
+                        </tr>
+                        <tr>
+                            <td>Lead Scoring</td>
+                            <td>Basic</td>
+                            <td>Enhanced</td>
+                            <td>AI-Enhanced</td>
+                            <td>Custom AI Training</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Prompts</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>API Integration</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>White-label AI</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Email</td>
+                            <td>Email</td>
+                            <td>Priority</td>
+                            <td>24/7 Dedicated</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How does billing work?</h3>
+                    <p>All plans are billed monthly. You can cancel anytime and your subscription will remain active until the end of your current billing period.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change plans?</h3>
+                    <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and billing is prorated.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards (Visa, MasterCard, American Express) and debit cards through our secure Stripe payment processor.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a free plan?</h3>
+                    <p>Yes! We offer a Free Basic plan with 100 AI messages per month, ChatGPT-3.5 access, and basic storm analysis. No credit card required.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How accurate is the lead data?</h3>
+                    <p>Our AI-powered system provides 95%+ accuracy for property owner identification and contact information through our Spokeo integration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I exceed my limits?</h3>
+                    <p>We'll notify you when you're approaching your limits. You can upgrade your plan or purchase additional credits as needed.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Which AI models are available?</h3>
+                    <p>We support ChatGPT (3.5, 4, 4 Turbo), Claude (3, 3 Opus, 3 Sonnet), Gemini (Pro, Ultra), and other premium AI models depending on your subscription level.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does AI storm analysis work?</h3>
+                    <p>Our AI analyzes weather data, property information, and historical patterns to provide intelligent insights on storm damage probability and lead scoring.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize AI prompts?</h3>
+                    <p>Yes! Professional AI plans and above allow you to create custom prompts for specialized storm damage analysis and lead generation workflows.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's the difference between AI tiers?</h3>
+                    <p>Basic AI offers ChatGPT-3.5 with 1K messages. Professional adds GPT-4 and Claude-3 with 5K messages. Enterprise includes all models with 15K messages. Extreme provides unlimited access to premium models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StormBuster</h3>
+                    <p>Advanced storm damage lead generation powered by AI technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StormBuster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal">
+        <div class="modal-content">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <h3>Processing Payment...</h3>
+            <p>Please wait while we redirect you to our secure payment processor.</p>
+        </div>
+    </div>
+
+    <script>
+        async function subscribeToPlan(planId) {
+            // Show loading modal
+            document.getElementById('loadingModal').style.display = 'block';
+            
+            try {
+                const response = await fetch('/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        plan_id: planId
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.checkout_url) {
+                    // Redirect to Stripe Checkout
+                    window.location.href = data.checkout_url;
+                } else {
+                    throw new Error(data.error || 'Failed to create checkout session');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error: ' + error.message);
+                document.getElementById('loadingModal').style.display = 'none';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('loadingModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

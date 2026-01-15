@@ -1,0 +1,22 @@
+[build]
+  command = "python app.py"
+  functions = "netlify/functions"
+  publish = "."
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "python app.py"
+
+[context.deploy-preview]
+  command = "python app.py"
+
+[context.branch-deploy]
+  command = "python app.py"
+

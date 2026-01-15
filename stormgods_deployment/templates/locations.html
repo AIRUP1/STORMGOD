@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StormBuster Locations - stormgod.work.gd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .domain-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .location-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .location-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .location-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+        }
+        
+        .location-content {
+            padding: 2rem;
+        }
+        
+        .location-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .severity-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .severity-low { background: #d4edda; color: #155724; }
+        .severity-moderate { background: #fff3cd; color: #856404; }
+        .severity-high { background: #f8d7da; color: #721c24; }
+        .severity-severe { background: #d1ecf1; color: #0c5460; }
+        
+        .location-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .location-stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .location-stat h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+        
+        .location-stat p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .vendor-list {
+            margin-top: 1rem;
+        }
+        
+        .vendor-list h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .vendor-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .vendor-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .search-section {
+            background: white;
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .search-form {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 1rem;
+            align-items: end;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .form-group select,
+        .form-group input {
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .search-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .results-section {
+            margin-top: 3rem;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+        }
+        
+        .result-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .result-card p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .location-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1><i class="fas fa-map-marked-alt"></i> StormBuster Locations</h1>
+            <p>Organized by Geographic Regions - stormgod.work.gd</p>
+            <div class="domain-badge">
+                <i class="fas fa-globe"></i> stormgod.work.gd
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>50</h3>
+                    <p>States Covered</p>
+                </div>
+                <div class="stat-card">
+                    <h3>200+</h3>
+                    <p>Metro Areas</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1,000+</h3>
+                    <p>Cities Served</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5,000+</h3>
+                    <p>Neighborhoods</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Your Location</h2>
+                <p>Search for storm damage services in your specific area</p>
+            </div>
+            
+            <form class="search-form" id="locationSearchForm">
+                <div class="form-group">
+                    <label for="stateSelect">State</label>
+                    <select id="stateSelect" name="state">
+                        <option value="">Select State</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Wyoming">Wyoming</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="California">California</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Hawaii">Hawaii</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regionSelect">Region</label>
+                    <select id="regionSelect" name="region">
+                        <option value="">Select Region</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Main Locations Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Major Service Areas</h2>
+                <p>Our network covers major metropolitan areas across the United States</p>
+            </div>
+            
+            <div class="location-grid" id="locationGrid">
+                <!-- Texas Locations -->
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-star"></i> Dallas-Fort Worth Metroplex</h3>
+                        <div class="severity-badge severity-high">High Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>25</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>150+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">Emergency Services</span>
+                                <span class="vendor-tag">Tree Removal</span>
+                                <span class="vendor-tag">Window Replacement</span>
+                                <span class="vendor-tag">Insurance Adjusters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-building"></i> Houston Area</h3>
+                        <div class="severity-badge severity-moderate">Moderate Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>15</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>80+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">Water Damage</span>
+                                <span class="vendor-tag">HVAC Services</span>
+                                <span class="vendor-tag">General Contractors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-music"></i> Austin Area</h3>
+                        <div class="severity-badge severity-moderate">Moderate Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>12</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>60+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">Landscaping</span>
+                                <span class="vendor-tag">Siding Contractors</span>
+                                <span class="vendor-tag">Painting Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-theater-masks"></i> San Antonio Area</h3>
+                        <div class="severity-badge severity-moderate">Moderate Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>10</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>50+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">Fence Contractors</span>
+                                <span class="vendor-tag">Gutter Services</span>
+                                <span class="vendor-tag">Flooring Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-city"></i> Oklahoma City Metro</h3>
+                        <div class="severity-badge severity-high">High Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>8</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>40+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Emergency Services</span>
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">Tree Removal</span>
+                                <span class="vendor-tag">Insurance Adjusters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="location-content">
+                        <h3><i class="fas fa-oil-can"></i> Tulsa Area</h3>
+                        <div class="severity-badge severity-moderate">Moderate Storm Activity</div>
+                        <div class="location-stats">
+                            <div class="location-stat">
+                                <h4>6</h4>
+                                <p>Cities</p>
+                            </div>
+                            <div class="location-stat">
+                                <h4>30+</h4>
+                                <p>Neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="vendor-list">
+                            <h4>Available Services:</h4>
+                            <div class="vendor-tags">
+                                <span class="vendor-tag">Roofing Contractors</span>
+                                <span class="vendor-tag">General Contractors</span>
+                                <span class="vendor-tag">Window Replacement</span>
+                                <span class="vendor-tag">HVAC Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="results-section" id="resultsSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Search Results</h2>
+                <p>Storm damage services available in your selected area</p>
+            </div>
+            
+            <div class="results-grid" id="resultsGrid">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Location Organization JavaScript
+        class LocationManager {
+            constructor() {
+                this.locationData = {};
+                this.initializeEventListeners();
+                this.loadLocationData();
+            }
+            
+            initializeEventListeners() {
+                // State selection
+                document.getElementById('stateSelect').addEventListener('change', (e) => {
+                    this.updateRegions(e.target.value);
+                });
+                
+                // Form submission
+                document.getElementById('locationSearchForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.searchLocations();
+                });
+            }
+            
+            async loadLocationData() {
+                try {
+                    const response = await fetch('/api/location-hierarchy');
+                    this.locationData = await response.json();
+                } catch (error) {
+                    console.error('Error loading location data:', error);
+                    // Use fallback data
+                    this.locationData = {
+                        "Texas": {
+                            "Dallas-Fort Worth Metroplex": ["Dallas", "Fort Worth", "Plano", "Frisco"],
+                            "Houston Area": ["Houston", "Sugar Land", "Katy", "The Woodlands"],
+                            "Austin Area": ["Austin", "Round Rock", "Cedar Park"],
+                            "San Antonio Area": ["San Antonio", "New Braunfels", "Schertz"]
+                        },
+                        "Oklahoma": {
+                            "Oklahoma City Metro": ["Oklahoma City", "Edmond", "Norman"],
+                            "Tulsa Area": ["Tulsa", "Broken Arrow", "Jenks"]
+                        }
+                    };
+                }
+            }
+            
+            updateRegions(state) {
+                const regionSelect = document.getElementById('regionSelect');
+                regionSelect.innerHTML = '<option value="">Select Region</option>';
+                
+                if (state && this.locationData[state]) {
+                    Object.keys(this.locationData[state]).forEach(region => {
+                        const option = document.createElement('option');
+                        option.value = region;
+                        option.textContent = region;
+                        regionSelect.appendChild(option);
+                    });
+                }
+            }
+            
+            async searchLocations() {
+                const state = document.getElementById('stateSelect').value;
+                const region = document.getElementById('regionSelect').value;
+                
+                if (!state) {
+                    alert('Please select a state');
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/api/location-search', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ state, region })
+                    });
+                    
+                    const results = await response.json();
+                    this.displayResults(results);
+                } catch (error) {
+                    console.error('Error searching locations:', error);
+                    this.displayResults([]);
+                }
+            }
+            
+            displayResults(results) {
+                const resultsSection = document.getElementById('resultsSection');
+                const resultsGrid = document.getElementById('resultsGrid');
+                
+                if (results.length === 0) {
+                    resultsGrid.innerHTML = `
+                        <div class="no-results">
+                            <i class="fas fa-search"></i>
+                            <h3>No Results Found</h3>
+                            <p>No storm damage services found for the selected area. Try expanding your search criteria.</p>
+                        </div>
+                    `;
+                } else {
+                    resultsGrid.innerHTML = results.map(result => `
+                        <div class="result-card">
+                            <h3>${result.name}</h3>
+                            <p><strong>Location:</strong> ${result.location}</p>
+                            <p><strong>Services:</strong> ${result.services.join(', ')}</p>
+                            <p><strong>Response Time:</strong> ${result.responseTime}</p>
+                            <p><strong>Rating:</strong> ${result.rating}/5 stars</p>
+                        </div>
+                    `).join('');
+                }
+                
+                resultsSection.style.display = 'block';
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new LocationManager();
+        });
+    </script>
+</body>
+</html>

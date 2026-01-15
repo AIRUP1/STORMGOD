@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8614603618497620da19f29142d9596b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8614603618497620da19f29142d9596b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8614603618497620da19f29142d9596b = L.map(
+                "map_8614603618497620da19f29142d9596b",
+                {
+                    center: [32.81518912621359, -97.10395417475728],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_020fbb532eb164575488a56cc33c55de = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_020fbb532eb164575488a56cc33c55de.addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var marker_291f4e8b9a688af497f81622b4eba5b4 = L.marker(
+                [33.17, -96.57],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_d581e60492965812f4c4729ff2a9dd9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6bd19bce290a0e6f381387dd112167b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88d2400cbb744fb0d14e8aa85d584dbc = $(`<div id="html_88d2400cbb744fb0d14e8aa85d584dbc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 28, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> McKinney<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> COLLIN<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.17,-96.57&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_6bd19bce290a0e6f381387dd112167b3.setContent(html_88d2400cbb744fb0d14e8aa85d584dbc);
+            
+        
+
+        marker_291f4e8b9a688af497f81622b4eba5b4.bindPopup(popup_6bd19bce290a0e6f381387dd112167b3)
+        ;
+
+        
+    
+    
+            marker_291f4e8b9a688af497f81622b4eba5b4.bindTooltip(
+                `<div>
+                     McKinney: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_291f4e8b9a688af497f81622b4eba5b4.setIcon(icon_d581e60492965812f4c4729ff2a9dd9b);
+            
+    
+            var marker_0c3febdce8598bfc2cd35e636b2fb074 = L.marker(
+                [33.11, -96.82],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_cd693a9419274912ecede913dfe131bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05e2fa48633b3cdfe4ae06e3da01339b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43bec4f314888ca8b7278ece24d60380 = $(`<div id="html_43bec4f314888ca8b7278ece24d60380" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Sep 25, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Frisco<br>         <b>📮 Zip:</b> 75034<br>         <b>🗺️ County:</b> COLLIN<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.11,-96.82&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_05e2fa48633b3cdfe4ae06e3da01339b.setContent(html_43bec4f314888ca8b7278ece24d60380);
+            
+        
+
+        marker_0c3febdce8598bfc2cd35e636b2fb074.bindPopup(popup_05e2fa48633b3cdfe4ae06e3da01339b)
+        ;
+
+        
+    
+    
+            marker_0c3febdce8598bfc2cd35e636b2fb074.bindTooltip(
+                `<div>
+                     Frisco: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c3febdce8598bfc2cd35e636b2fb074.setIcon(icon_cd693a9419274912ecede913dfe131bd);
+            
+    
+            var marker_274414dee8215f1367151aa1beec898c = L.marker(
+                [33.04, -96.84],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_7cddb6782230556d1604661f8781b9cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd22f91c4a504837ea58e3e3d590196d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11badf2de6acc251f375325e646f7f25 = $(`<div id="html_11badf2de6acc251f375325e646f7f25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Sep 25, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Plano<br>         <b>📮 Zip:</b> 75093<br>         <b>🗺️ County:</b> COLLIN<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.04,-96.84&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_dd22f91c4a504837ea58e3e3d590196d.setContent(html_11badf2de6acc251f375325e646f7f25);
+            
+        
+
+        marker_274414dee8215f1367151aa1beec898c.bindPopup(popup_dd22f91c4a504837ea58e3e3d590196d)
+        ;
+
+        
+    
+    
+            marker_274414dee8215f1367151aa1beec898c.bindTooltip(
+                `<div>
+                     Plano: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_274414dee8215f1367151aa1beec898c.setIcon(icon_7cddb6782230556d1604661f8781b9cc);
+            
+    
+            var marker_d11b26ee04277ee2d296793c380bb86a = L.marker(
+                [33.09, -96.64],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_1c577f1a27e30e9d8cc00d84e728d870 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1113b661a17a893bca543aeda991ae2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_84c509c2d0c20c9a3f11cbe004ff8ee3 = $(`<div id="html_84c509c2d0c20c9a3f11cbe004ff8ee3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 25, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Allen<br>         <b>📮 Zip:</b> 75003<br>         <b>🗺️ County:</b> COLLIN<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.09,-96.64&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_d1113b661a17a893bca543aeda991ae2.setContent(html_84c509c2d0c20c9a3f11cbe004ff8ee3);
+            
+        
+
+        marker_d11b26ee04277ee2d296793c380bb86a.bindPopup(popup_d1113b661a17a893bca543aeda991ae2)
+        ;
+
+        
+    
+    
+            marker_d11b26ee04277ee2d296793c380bb86a.bindTooltip(
+                `<div>
+                     Allen: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d11b26ee04277ee2d296793c380bb86a.setIcon(icon_1c577f1a27e30e9d8cc00d84e728d870);
+            
+    
+            var marker_6999b8c2385ddb6851c256c06a823bcf = L.marker(
+                [33.06, -96.61],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_39505abb6667ac1ded750801bccee970 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b19a07ff79bcabe38b3731864abaa50 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c42649ccf29f4b35a43aab95273acb8 = $(`<div id="html_0c42649ccf29f4b35a43aab95273acb8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 25, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.25"</span><br>         <b>🏘️ City:</b> Parker<br>         <b>📮 Zip:</b> 75002<br>         <b>🗺️ County:</b> COLLIN<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.06,-96.61&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_6b19a07ff79bcabe38b3731864abaa50.setContent(html_0c42649ccf29f4b35a43aab95273acb8);
+            
+        
+
+        marker_6999b8c2385ddb6851c256c06a823bcf.bindPopup(popup_6b19a07ff79bcabe38b3731864abaa50)
+        ;
+
+        
+    
+    
+            marker_6999b8c2385ddb6851c256c06a823bcf.bindTooltip(
+                `<div>
+                     Parker: 2.25" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6999b8c2385ddb6851c256c06a823bcf.setIcon(icon_39505abb6667ac1ded750801bccee970);
+            
+    
+            var marker_6796b2fc073e9e85b05e27d7978f1d28 = L.marker(
+                [32.64, -96.69],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_2f40711106d104ea60ee5e77bdc629b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4cf507da8d0fda01744fb33aecddefc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65d00a181ce9e16423ad41233160a121 = $(`<div id="html_65d00a181ce9e16423ad41233160a121" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Hutchins<br>         <b>📮 Zip:</b> 75141<br>         <b>🗺️ County:</b> DALLAS<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.64,-96.69&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_f4cf507da8d0fda01744fb33aecddefc.setContent(html_65d00a181ce9e16423ad41233160a121);
+            
+        
+
+        marker_6796b2fc073e9e85b05e27d7978f1d28.bindPopup(popup_f4cf507da8d0fda01744fb33aecddefc)
+        ;
+
+        
+    
+    
+            marker_6796b2fc073e9e85b05e27d7978f1d28.bindTooltip(
+                `<div>
+                     Hutchins: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6796b2fc073e9e85b05e27d7978f1d28.setIcon(icon_2f40711106d104ea60ee5e77bdc629b3);
+            
+    
+            var marker_61842cfcf9c7d33e2399a443f60f6804 = L.marker(
+                [33.0, -97.26],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_c31bbb7dbd230178091649848c8cb906 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7cab41fabccc8afff200ffe993e15bd0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02b364cdecfac05a7cef24ae96088479 = $(`<div id="html_02b364cdecfac05a7cef24ae96088479" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Fort Worth<br>         <b>📮 Zip:</b> 76262<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.0,-97.26&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_7cab41fabccc8afff200ffe993e15bd0.setContent(html_02b364cdecfac05a7cef24ae96088479);
+            
+        
+
+        marker_61842cfcf9c7d33e2399a443f60f6804.bindPopup(popup_7cab41fabccc8afff200ffe993e15bd0)
+        ;
+
+        
+    
+    
+            marker_61842cfcf9c7d33e2399a443f60f6804.bindTooltip(
+                `<div>
+                     Fort Worth: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_61842cfcf9c7d33e2399a443f60f6804.setIcon(icon_c31bbb7dbd230178091649848c8cb906);
+            
+    
+            var marker_0d0aac08be3196d8942b5c3db7170e3d = L.marker(
+                [33.09, -97.13],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_dc023ce3d17a08bf2e8d026264c3ff0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1a10c83c435adbd87cb53ffa6bc1ec8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c80b04f2e002866fa43814ab8d9747ff = $(`<div id="html_c80b04f2e002866fa43814ab8d9747ff" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Lantana<br>         <b>📮 Zip:</b> 76226<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.09,-97.13&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_f1a10c83c435adbd87cb53ffa6bc1ec8.setContent(html_c80b04f2e002866fa43814ab8d9747ff);
+            
+        
+
+        marker_0d0aac08be3196d8942b5c3db7170e3d.bindPopup(popup_f1a10c83c435adbd87cb53ffa6bc1ec8)
+        ;
+
+        
+    
+    
+            marker_0d0aac08be3196d8942b5c3db7170e3d.bindTooltip(
+                `<div>
+                     Lantana: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d0aac08be3196d8942b5c3db7170e3d.setIcon(icon_dc023ce3d17a08bf2e8d026264c3ff0e);
+            
+    
+            var marker_2d05c9573473d6a5f58d1729e3bc73f6 = L.marker(
+                [33.06, -97.09],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_99aa7344e6cd3f4f82270959f52ffe72 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a2f302fa5702a90444654510a611256 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4b4875f82859fc1c3aba64f6dd7a1fd7 = $(`<div id="html_4b4875f82859fc1c3aba64f6dd7a1fd7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.5"</span><br>         <b>🏘️ City:</b> Double Oak<br>         <b>📮 Zip:</b> 75077<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.06,-97.09&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_2a2f302fa5702a90444654510a611256.setContent(html_4b4875f82859fc1c3aba64f6dd7a1fd7);
+            
+        
+
+        marker_2d05c9573473d6a5f58d1729e3bc73f6.bindPopup(popup_2a2f302fa5702a90444654510a611256)
+        ;
+
+        
+    
+    
+            marker_2d05c9573473d6a5f58d1729e3bc73f6.bindTooltip(
+                `<div>
+                     Double Oak: 3.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d05c9573473d6a5f58d1729e3bc73f6.setIcon(icon_99aa7344e6cd3f4f82270959f52ffe72);
+            
+    
+            var marker_d4e94387fd421ae5fa49dc92790f1529 = L.marker(
+                [33.12, -97.18],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_bdc2e6fc53d73a72929e08bf0dabdf79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_112002fe6c7cbbf4846fa1e4b7a49943 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc4bc09bf055e30381fece38fe277635 = $(`<div id="html_bc4bc09bf055e30381fece38fe277635" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Argyle<br>         <b>📮 Zip:</b> 76226<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.12,-97.18&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_112002fe6c7cbbf4846fa1e4b7a49943.setContent(html_bc4bc09bf055e30381fece38fe277635);
+            
+        
+
+        marker_d4e94387fd421ae5fa49dc92790f1529.bindPopup(popup_112002fe6c7cbbf4846fa1e4b7a49943)
+        ;
+
+        
+    
+    
+            marker_d4e94387fd421ae5fa49dc92790f1529.bindTooltip(
+                `<div>
+                     Argyle: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4e94387fd421ae5fa49dc92790f1529.setIcon(icon_bdc2e6fc53d73a72929e08bf0dabdf79);
+            
+    
+            var marker_ceff553ed586a2941781a70ea670afa4 = L.marker(
+                [33.09, -97.06],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_2d6e73c15b24f50dd7a82390c3703dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_278c05b89d320d0feff31a781ddc7c42 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85e7ee34a491538869f054cf9a98f76d = $(`<div id="html_85e7ee34a491538869f054cf9a98f76d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Highland Village<br>         <b>📮 Zip:</b> 75077<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.09,-97.06&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_278c05b89d320d0feff31a781ddc7c42.setContent(html_85e7ee34a491538869f054cf9a98f76d);
+            
+        
+
+        marker_ceff553ed586a2941781a70ea670afa4.bindPopup(popup_278c05b89d320d0feff31a781ddc7c42)
+        ;
+
+        
+    
+    
+            marker_ceff553ed586a2941781a70ea670afa4.bindTooltip(
+                `<div>
+                     Highland Village: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ceff553ed586a2941781a70ea670afa4.setIcon(icon_2d6e73c15b24f50dd7a82390c3703dfa);
+            
+    
+            var marker_b1b8069d013d6c02bf706041a049a13d = L.marker(
+                [33.12, -97.06],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_d208b125a7097dffac417dffa33ef719 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29928d73e6d0d204de889b6692bbbf51 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c5858cfaa7744fee30d2120cf9f28b8 = $(`<div id="html_1c5858cfaa7744fee30d2120cf9f28b8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> 76210<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.12,-97.06&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_29928d73e6d0d204de889b6692bbbf51.setContent(html_1c5858cfaa7744fee30d2120cf9f28b8);
+            
+        
+
+        marker_b1b8069d013d6c02bf706041a049a13d.bindPopup(popup_29928d73e6d0d204de889b6692bbbf51)
+        ;
+
+        
+    
+    
+            marker_b1b8069d013d6c02bf706041a049a13d.bindTooltip(
+                `<div>
+                     Unknown: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1b8069d013d6c02bf706041a049a13d.setIcon(icon_d208b125a7097dffac417dffa33ef719);
+            
+    
+            var marker_7cec9be8560f7f6caba112a15c033dcb = L.marker(
+                [33.18, -96.89],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_2b7d9938f835d426da3326efb2b12065 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba52ab9a1736ae80c573e4f504a67a38 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1be5b9ba8f9fd11866863513e1005ff3 = $(`<div id="html_1be5b9ba8f9fd11866863513e1005ff3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Little Elm<br>         <b>📮 Zip:</b> 75068<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.18,-96.89&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_ba52ab9a1736ae80c573e4f504a67a38.setContent(html_1be5b9ba8f9fd11866863513e1005ff3);
+            
+        
+
+        marker_7cec9be8560f7f6caba112a15c033dcb.bindPopup(popup_ba52ab9a1736ae80c573e4f504a67a38)
+        ;
+
+        
+    
+    
+            marker_7cec9be8560f7f6caba112a15c033dcb.bindTooltip(
+                `<div>
+                     Little Elm: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7cec9be8560f7f6caba112a15c033dcb.setIcon(icon_2b7d9938f835d426da3326efb2b12065);
+            
+    
+            var marker_7f98586b3b79041b55c2363e2c7ba4f4 = L.marker(
+                [33.18, -96.89],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_a06cabe9d09cd0e68fb567d733664bf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c66d0c779e57bd0021f3dfab0f73254 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e9738fc24c5e143e13abe53f258f5ae = $(`<div id="html_2e9738fc24c5e143e13abe53f258f5ae" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Mar 14, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Little Elm<br>         <b>📮 Zip:</b> 75068<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.18,-96.89&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_1c66d0c779e57bd0021f3dfab0f73254.setContent(html_2e9738fc24c5e143e13abe53f258f5ae);
+            
+        
+
+        marker_7f98586b3b79041b55c2363e2c7ba4f4.bindPopup(popup_1c66d0c779e57bd0021f3dfab0f73254)
+        ;
+
+        
+    
+    
+            marker_7f98586b3b79041b55c2363e2c7ba4f4.bindTooltip(
+                `<div>
+                     Little Elm: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f98586b3b79041b55c2363e2c7ba4f4.setIcon(icon_a06cabe9d09cd0e68fb567d733664bf5);
+            
+    
+            var marker_fb9af3e0a241ab50a3cd2877b3d76254 = L.marker(
+                [33.05, -97.33],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_71911af36eecf7a2e89668b2259c32fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75c3822b2ca47faee6bfdf3017a15c11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc6c91c648fab2fd6670a95822afc419 = $(`<div id="html_cc6c91c648fab2fd6670a95822afc419" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.4"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> 76247<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.05,-97.33&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_75c3822b2ca47faee6bfdf3017a15c11.setContent(html_cc6c91c648fab2fd6670a95822afc419);
+            
+        
+
+        marker_fb9af3e0a241ab50a3cd2877b3d76254.bindPopup(popup_75c3822b2ca47faee6bfdf3017a15c11)
+        ;
+
+        
+    
+    
+            marker_fb9af3e0a241ab50a3cd2877b3d76254.bindTooltip(
+                `<div>
+                     Unknown: 3.4" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb9af3e0a241ab50a3cd2877b3d76254.setIcon(icon_71911af36eecf7a2e89668b2259c32fa);
+            
+    
+            var marker_594e7c8c51cda1bba2452dbf8a79132b = L.marker(
+                [33.09, -97.29],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_eba7931715514dd13972acd18b492a6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c1fa3409851ae3dc1cad0f3d9486df9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b47f464b683c3bc062b1ed02fef4f11c = $(`<div id="html_b47f464b683c3bc062b1ed02fef4f11c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Justin<br>         <b>📮 Zip:</b> 76247<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.09,-97.29&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_9c1fa3409851ae3dc1cad0f3d9486df9.setContent(html_b47f464b683c3bc062b1ed02fef4f11c);
+            
+        
+
+        marker_594e7c8c51cda1bba2452dbf8a79132b.bindPopup(popup_9c1fa3409851ae3dc1cad0f3d9486df9)
+        ;
+
+        
+    
+    
+            marker_594e7c8c51cda1bba2452dbf8a79132b.bindTooltip(
+                `<div>
+                     Justin: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_594e7c8c51cda1bba2452dbf8a79132b.setIcon(icon_eba7931715514dd13972acd18b492a6d);
+            
+    
+            var marker_0c2797b69fb79368ef0dd47a02e360f6 = L.marker(
+                [33.0998, -97.2545],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_c1fb79f014e6bb487554e414bc0aa426 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d19adee8ac1683a825d3db9ec7c3373f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05701a06feebc2d9f8e14d8bf817a872 = $(`<div id="html_05701a06feebc2d9f8e14d8bf817a872" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Northlake<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.0998,-97.2545&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_d19adee8ac1683a825d3db9ec7c3373f.setContent(html_05701a06feebc2d9f8e14d8bf817a872);
+            
+        
+
+        marker_0c2797b69fb79368ef0dd47a02e360f6.bindPopup(popup_d19adee8ac1683a825d3db9ec7c3373f)
+        ;
+
+        
+    
+    
+            marker_0c2797b69fb79368ef0dd47a02e360f6.bindTooltip(
+                `<div>
+                     Northlake: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c2797b69fb79368ef0dd47a02e360f6.setIcon(icon_c1fb79f014e6bb487554e414bc0aa426);
+            
+    
+            var marker_0599ae5589d7ac2885043a3d80ebf17a = L.marker(
+                [33.1, -97.23],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_32808a51f1400f98af789b3ffa5c2398 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5988a7bde328827f0c337b3a45b1ef96 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ebfc6d3f0034afff813a76b4883b8a62 = $(`<div id="html_ebfc6d3f0034afff813a76b4883b8a62" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Northlake<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.1,-97.23&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_5988a7bde328827f0c337b3a45b1ef96.setContent(html_ebfc6d3f0034afff813a76b4883b8a62);
+            
+        
+
+        marker_0599ae5589d7ac2885043a3d80ebf17a.bindPopup(popup_5988a7bde328827f0c337b3a45b1ef96)
+        ;
+
+        
+    
+    
+            marker_0599ae5589d7ac2885043a3d80ebf17a.bindTooltip(
+                `<div>
+                     Northlake: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0599ae5589d7ac2885043a3d80ebf17a.setIcon(icon_32808a51f1400f98af789b3ffa5c2398);
+            
+    
+            var marker_8a256a1251b2a8743beca0330aaaf2e8 = L.marker(
+                [33.0767, -97.2066],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_96c16c208408109cf7e240c5e9eb3ece = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_942563c0f52e6063d028c75254ac980d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0fee45bbe0586f3a8391698eea190617 = $(`<div id="html_0fee45bbe0586f3a8391698eea190617" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Flower Mound<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.0767,-97.2066&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_942563c0f52e6063d028c75254ac980d.setContent(html_0fee45bbe0586f3a8391698eea190617);
+            
+        
+
+        marker_8a256a1251b2a8743beca0330aaaf2e8.bindPopup(popup_942563c0f52e6063d028c75254ac980d)
+        ;
+
+        
+    
+    
+            marker_8a256a1251b2a8743beca0330aaaf2e8.bindTooltip(
+                `<div>
+                     Flower Mound: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a256a1251b2a8743beca0330aaaf2e8.setIcon(icon_96c16c208408109cf7e240c5e9eb3ece);
+            
+    
+            var marker_8fa3bb833660d2f4ba0f696b0f37fb1d = L.marker(
+                [33.1575, -97.1603],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_7ad0ddd411773358680380c690095eb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9ddb05692c6e519fdf299a134b0079d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1882c88d387ec48bf28808a01ea6244e = $(`<div id="html_1882c88d387ec48bf28808a01ea6244e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Denton<br>         <b>📮 Zip:</b> 76226<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.1575,-97.1603&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_e9ddb05692c6e519fdf299a134b0079d.setContent(html_1882c88d387ec48bf28808a01ea6244e);
+            
+        
+
+        marker_8fa3bb833660d2f4ba0f696b0f37fb1d.bindPopup(popup_e9ddb05692c6e519fdf299a134b0079d)
+        ;
+
+        
+    
+    
+            marker_8fa3bb833660d2f4ba0f696b0f37fb1d.bindTooltip(
+                `<div>
+                     Denton: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fa3bb833660d2f4ba0f696b0f37fb1d.setIcon(icon_7ad0ddd411773358680380c690095eb4);
+            
+    
+            var marker_3abf0de7c70b47191d71ac439d50c2bb = L.marker(
+                [33.02, -97.23],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_530e30ca337d78997a712e6d63c8592f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e71a80a36722828a96b84da9a3747503 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e281fca1f53babb299875fd843763d0 = $(`<div id="html_0e281fca1f53babb299875fd843763d0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Roanoke<br>         <b>📮 Zip:</b> 76262<br>         <b>🗺️ County:</b> DENTON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.02,-97.23&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_e71a80a36722828a96b84da9a3747503.setContent(html_0e281fca1f53babb299875fd843763d0);
+            
+        
+
+        marker_3abf0de7c70b47191d71ac439d50c2bb.bindPopup(popup_e71a80a36722828a96b84da9a3747503)
+        ;
+
+        
+    
+    
+            marker_3abf0de7c70b47191d71ac439d50c2bb.bindTooltip(
+                `<div>
+                     Roanoke: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3abf0de7c70b47191d71ac439d50c2bb.setIcon(icon_530e30ca337d78997a712e6d63c8592f);
+            
+    
+            var marker_e5c01a34bb79ea3585e48a1a15f1324d = L.marker(
+                [32.46, -96.64],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_58b4980b50bc400331452d5081057913 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e30ef88d24acac36afb6a09b9cd4472b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e750b316ceac50f1ffc6f806ba2bf25 = $(`<div id="html_2e750b316ceac50f1ffc6f806ba2bf25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> 75152<br>         <b>🗺️ County:</b> ELLIS<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.46,-96.64&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_e30ef88d24acac36afb6a09b9cd4472b.setContent(html_2e750b316ceac50f1ffc6f806ba2bf25);
+            
+        
+
+        marker_e5c01a34bb79ea3585e48a1a15f1324d.bindPopup(popup_e30ef88d24acac36afb6a09b9cd4472b)
+        ;
+
+        
+    
+    
+            marker_e5c01a34bb79ea3585e48a1a15f1324d.bindTooltip(
+                `<div>
+                     Unknown: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5c01a34bb79ea3585e48a1a15f1324d.setIcon(icon_58b4980b50bc400331452d5081057913);
+            
+    
+            var marker_12de2b1ee356d2ec8e19210724648385 = L.marker(
+                [32.44, -96.84],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_793642d44076efb141ac54e00e6fc92f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cde02b077c3d46daa734a5b38c9b75a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c64a5b4c3d45d9c8698aef43dd423abb = $(`<div id="html_c64a5b4c3d45d9c8698aef43dd423abb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 30, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Waxahachie<br>         <b>📮 Zip:</b> 75165<br>         <b>🗺️ County:</b> ELLIS<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.44,-96.84&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_3cde02b077c3d46daa734a5b38c9b75a.setContent(html_c64a5b4c3d45d9c8698aef43dd423abb);
+            
+        
+
+        marker_12de2b1ee356d2ec8e19210724648385.bindPopup(popup_3cde02b077c3d46daa734a5b38c9b75a)
+        ;
+
+        
+    
+    
+            marker_12de2b1ee356d2ec8e19210724648385.bindTooltip(
+                `<div>
+                     Waxahachie: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12de2b1ee356d2ec8e19210724648385.setIcon(icon_793642d44076efb141ac54e00e6fc92f);
+            
+    
+            var marker_a0adf0d81f66f16c055b62a9a1436128 = L.marker(
+                [32.41, -97.01],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_0540c1d99634db4b9c4c4d277a89842d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11b29fe2ab2377a707b52340aa6c97fa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c63b71857e21a963c847cce1e5264fb2 = $(`<div id="html_c63b71857e21a963c847cce1e5264fb2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 16, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> ELLIS<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.41,-97.01&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_11b29fe2ab2377a707b52340aa6c97fa.setContent(html_c63b71857e21a963c847cce1e5264fb2);
+            
+        
+
+        marker_a0adf0d81f66f16c055b62a9a1436128.bindPopup(popup_11b29fe2ab2377a707b52340aa6c97fa)
+        ;
+
+        
+    
+    
+            marker_a0adf0d81f66f16c055b62a9a1436128.bindTooltip(
+                `<div>
+                     Unknown: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0adf0d81f66f16c055b62a9a1436128.setIcon(icon_0540c1d99634db4b9c4c4d277a89842d);
+            
+    
+            var marker_0f2f66b6ace3749266048cfadfd6a482 = L.marker(
+                [32.35, -96.66],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_91da6dda4b75f3dac4c715b11d5cdd06 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26aeeed454b7b106d9161cd2071549f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41bc834f9e8518f93ef5389a76dae234 = $(`<div id="html_41bc834f9e8518f93ef5389a76dae234" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 16, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Ennis<br>         <b>📮 Zip:</b> 75120<br>         <b>🗺️ County:</b> ELLIS<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.35,-96.66&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_26aeeed454b7b106d9161cd2071549f0.setContent(html_41bc834f9e8518f93ef5389a76dae234);
+            
+        
+
+        marker_0f2f66b6ace3749266048cfadfd6a482.bindPopup(popup_26aeeed454b7b106d9161cd2071549f0)
+        ;
+
+        
+    
+    
+            marker_0f2f66b6ace3749266048cfadfd6a482.bindTooltip(
+                `<div>
+                     Ennis: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f2f66b6ace3749266048cfadfd6a482.setIcon(icon_91da6dda4b75f3dac4c715b11d5cdd06);
+            
+    
+            var marker_710cf05ac785573fa6d4cfe1e8e6945a = L.marker(
+                [32.45, -98.25],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_d3b5848a893fcdc5477d5c149127f198 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66a0311a059218c3a138fc02bf6a32d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a337a009e211dece0ab56b00fde7febc = $(`<div id="html_a337a009e211dece0ab56b00fde7febc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Sapoak<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> ERATH<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.45,-98.25&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_66a0311a059218c3a138fc02bf6a32d4.setContent(html_a337a009e211dece0ab56b00fde7febc);
+            
+        
+
+        marker_710cf05ac785573fa6d4cfe1e8e6945a.bindPopup(popup_66a0311a059218c3a138fc02bf6a32d4)
+        ;
+
+        
+    
+    
+            marker_710cf05ac785573fa6d4cfe1e8e6945a.bindTooltip(
+                `<div>
+                     Sapoak: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_710cf05ac785573fa6d4cfe1e8e6945a.setIcon(icon_d3b5848a893fcdc5477d5c149127f198);
+            
+    
+            var marker_82208d621c650e4d1ef9c00922fcee66 = L.marker(
+                [32.39, -97.92],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_7d79edda0cd49c3b3fe343cb3a211add = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af34688c647dc9e1c343fe5b44819fe6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c11f6af7be4e9141c873ed6ee2193249 = $(`<div id="html_c11f6af7be4e9141c873ed6ee2193249" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.25"</span><br>         <b>🏘️ City:</b> Tolar<br>         <b>📮 Zip:</b> 76476<br>         <b>🗺️ County:</b> HOOD<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.39,-97.92&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_af34688c647dc9e1c343fe5b44819fe6.setContent(html_c11f6af7be4e9141c873ed6ee2193249);
+            
+        
+
+        marker_82208d621c650e4d1ef9c00922fcee66.bindPopup(popup_af34688c647dc9e1c343fe5b44819fe6)
+        ;
+
+        
+    
+    
+            marker_82208d621c650e4d1ef9c00922fcee66.bindTooltip(
+                `<div>
+                     Tolar: 3.25" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82208d621c650e4d1ef9c00922fcee66.setIcon(icon_7d79edda0cd49c3b3fe343cb3a211add);
+            
+    
+            var marker_9f496ca4268de0b7d4356fe4b94658bb = L.marker(
+                [32.39, -97.92],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_b36662754d66b6878e467f7bd4196bcf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2582c489e5ab7d76e6a6f448fc7655e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10251485147b7ea5022a2470e46beacd = $(`<div id="html_10251485147b7ea5022a2470e46beacd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Tolar<br>         <b>📮 Zip:</b> 76476<br>         <b>🗺️ County:</b> HOOD<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.39,-97.92&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_2582c489e5ab7d76e6a6f448fc7655e0.setContent(html_10251485147b7ea5022a2470e46beacd);
+            
+        
+
+        marker_9f496ca4268de0b7d4356fe4b94658bb.bindPopup(popup_2582c489e5ab7d76e6a6f448fc7655e0)
+        ;
+
+        
+    
+    
+            marker_9f496ca4268de0b7d4356fe4b94658bb.bindTooltip(
+                `<div>
+                     Tolar: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f496ca4268de0b7d4356fe4b94658bb.setIcon(icon_b36662754d66b6878e467f7bd4196bcf);
+            
+    
+            var marker_15a3d0c8ce99cf01a34fb775bf1accda = L.marker(
+                [32.36, -97.66],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_b7737c5b6c98463d601b29f79e3678c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9983c73f70a8dadafcf08b5a13321c7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de6a6c2803832b16d77310286157fcd9 = $(`<div id="html_de6a6c2803832b16d77310286157fcd9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">4.5"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> HOOD<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.36,-97.66&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_9983c73f70a8dadafcf08b5a13321c7d.setContent(html_de6a6c2803832b16d77310286157fcd9);
+            
+        
+
+        marker_15a3d0c8ce99cf01a34fb775bf1accda.bindPopup(popup_9983c73f70a8dadafcf08b5a13321c7d)
+        ;
+
+        
+    
+    
+            marker_15a3d0c8ce99cf01a34fb775bf1accda.bindTooltip(
+                `<div>
+                     Unknown: 4.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15a3d0c8ce99cf01a34fb775bf1accda.setIcon(icon_b7737c5b6c98463d601b29f79e3678c3);
+            
+    
+            var marker_eebc3478f9161d3f1a5af5ad2e6d9d88 = L.marker(
+                [32.2524, -97.5496],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_e07a5377fdb01b3fdf43713644158899 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_931aa34813b9a6eb13fad1fad4101526 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_489794ecb99d32c9aab3131531db7201 = $(`<div id="html_489794ecb99d32c9aab3131531db7201" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> JOHNSON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.2524,-97.5496&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_931aa34813b9a6eb13fad1fad4101526.setContent(html_489794ecb99d32c9aab3131531db7201);
+            
+        
+
+        marker_eebc3478f9161d3f1a5af5ad2e6d9d88.bindPopup(popup_931aa34813b9a6eb13fad1fad4101526)
+        ;
+
+        
+    
+    
+            marker_eebc3478f9161d3f1a5af5ad2e6d9d88.bindTooltip(
+                `<div>
+                     Unknown: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eebc3478f9161d3f1a5af5ad2e6d9d88.setIcon(icon_e07a5377fdb01b3fdf43713644158899);
+            
+    
+            var marker_c34b8538f6146442d068604aed05be4a = L.marker(
+                [32.3209, -97.4486],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_da67e95fcac0ab889f464518bd441dfc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76ada25e8ae0584849e0006b88dd0eaf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17edf9a7b277adc1cee7fb5c4f6a20cd = $(`<div id="html_17edf9a7b277adc1cee7fb5c4f6a20cd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 09, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Cleburne<br>         <b>📮 Zip:</b> 76032<br>         <b>🗺️ County:</b> JOHNSON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.3209,-97.4486&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_76ada25e8ae0584849e0006b88dd0eaf.setContent(html_17edf9a7b277adc1cee7fb5c4f6a20cd);
+            
+        
+
+        marker_c34b8538f6146442d068604aed05be4a.bindPopup(popup_76ada25e8ae0584849e0006b88dd0eaf)
+        ;
+
+        
+    
+    
+            marker_c34b8538f6146442d068604aed05be4a.bindTooltip(
+                `<div>
+                     Cleburne: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c34b8538f6146442d068604aed05be4a.setIcon(icon_da67e95fcac0ab889f464518bd441dfc);
+            
+    
+            var marker_835788d6604181af7c5f6426d69bbbea = L.marker(
+                [32.5, -97.53],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_3077cae2b2f9300a19b2122d52834a63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35d11c5801c1e74a7ed94f44b50f5cd8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba3d89db12ce55eaad8584663905c894 = $(`<div id="html_ba3d89db12ce55eaad8584663905c894" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 16, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> 76044<br>         <b>🗺️ County:</b> JOHNSON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.5,-97.53&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_35d11c5801c1e74a7ed94f44b50f5cd8.setContent(html_ba3d89db12ce55eaad8584663905c894);
+            
+        
+
+        marker_835788d6604181af7c5f6426d69bbbea.bindPopup(popup_35d11c5801c1e74a7ed94f44b50f5cd8)
+        ;
+
+        
+    
+    
+            marker_835788d6604181af7c5f6426d69bbbea.bindTooltip(
+                `<div>
+                     Unknown: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_835788d6604181af7c5f6426d69bbbea.setIcon(icon_3077cae2b2f9300a19b2122d52834a63);
+            
+    
+            var marker_b763e6e022fcfb11608f0aff50241e82 = L.marker(
+                [32.46, -97.38],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_f605cea398dae3d6f4da4f17ce74625e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9376b3ecd8111e7e758f5517807f742f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_001363c4b538dbc04d1b692c2945dabd = $(`<div id="html_001363c4b538dbc04d1b692c2945dabd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 16, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Joshua<br>         <b>📮 Zip:</b> 76058<br>         <b>🗺️ County:</b> JOHNSON<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.46,-97.38&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_9376b3ecd8111e7e758f5517807f742f.setContent(html_001363c4b538dbc04d1b692c2945dabd);
+            
+        
+
+        marker_b763e6e022fcfb11608f0aff50241e82.bindPopup(popup_9376b3ecd8111e7e758f5517807f742f)
+        ;
+
+        
+    
+    
+            marker_b763e6e022fcfb11608f0aff50241e82.bindTooltip(
+                `<div>
+                     Joshua: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b763e6e022fcfb11608f0aff50241e82.setIcon(icon_f605cea398dae3d6f4da4f17ce74625e);
+            
+    
+            var marker_cb083d9952ab30b2d3ce60359f52ba52 = L.marker(
+                [32.87, -98.42],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_d2d8a9d572a17d05df7040a4e19c32d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ba44c7818c51a8a01adf9a85e1831d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d87c9b07f89542b43d875f2675706bc = $(`<div id="html_5d87c9b07f89542b43d875f2675706bc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 08, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> 76449<br>         <b>🗺️ County:</b> PALO PINTO<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.87,-98.42&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_4ba44c7818c51a8a01adf9a85e1831d4.setContent(html_5d87c9b07f89542b43d875f2675706bc);
+            
+        
+
+        marker_cb083d9952ab30b2d3ce60359f52ba52.bindPopup(popup_4ba44c7818c51a8a01adf9a85e1831d4)
+        ;
+
+        
+    
+    
+            marker_cb083d9952ab30b2d3ce60359f52ba52.bindTooltip(
+                `<div>
+                     Unknown: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb083d9952ab30b2d3ce60359f52ba52.setIcon(icon_d2d8a9d572a17d05df7040a4e19c32d3);
+            
+    
+            var marker_6576df68bcfa36038b3f808d92c782ce = L.marker(
+                [32.97, -97.69],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_8ab60511a775acda6dc5ec1f85cf292f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08d645e943e22ab4cd918f1f3ae7e4dd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7d8f0ca54bcb1856f6ce88a82df8323 = $(`<div id="html_d7d8f0ca54bcb1856f6ce88a82df8323" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Springtown<br>         <b>📮 Zip:</b> 76082<br>         <b>🗺️ County:</b> PARKER<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.97,-97.69&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_08d645e943e22ab4cd918f1f3ae7e4dd.setContent(html_d7d8f0ca54bcb1856f6ce88a82df8323);
+            
+        
+
+        marker_6576df68bcfa36038b3f808d92c782ce.bindPopup(popup_08d645e943e22ab4cd918f1f3ae7e4dd)
+        ;
+
+        
+    
+    
+            marker_6576df68bcfa36038b3f808d92c782ce.bindTooltip(
+                `<div>
+                     Springtown: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6576df68bcfa36038b3f808d92c782ce.setIcon(icon_8ab60511a775acda6dc5ec1f85cf292f);
+            
+    
+            var marker_071137cb4bd78bc77949913b36d809ea = L.marker(
+                [32.66, -98.04],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_7ea91635adad29c2381f3243fa5f566f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2642121d5bd4c10b996f73d1b2e086eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fbab2c55a8cc7964fed04a7932fb045 = $(`<div id="html_2fbab2c55a8cc7964fed04a7932fb045" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 18, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> PARKER<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.66,-98.04&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_2642121d5bd4c10b996f73d1b2e086eb.setContent(html_2fbab2c55a8cc7964fed04a7932fb045);
+            
+        
+
+        marker_071137cb4bd78bc77949913b36d809ea.bindPopup(popup_2642121d5bd4c10b996f73d1b2e086eb)
+        ;
+
+        
+    
+    
+            marker_071137cb4bd78bc77949913b36d809ea.bindTooltip(
+                `<div>
+                     Unknown: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_071137cb4bd78bc77949913b36d809ea.setIcon(icon_7ea91635adad29c2381f3243fa5f566f);
+            
+    
+            var marker_0bd6031476e12f5da746fe48106a6971 = L.marker(
+                [32.7039, -97.1005],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_6f901a712ea12fa5ac08909aac11894c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c64d22cc7c9cce38e6426126d33afbc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_756d3b6c47040263752dd10f3c53b6de = $(`<div id="html_756d3b6c47040263752dd10f3c53b6de" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 22, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.25"</span><br>         <b>🏘️ City:</b> Arlington<br>         <b>📮 Zip:</b> 76014<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.7039,-97.1005&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_0c64d22cc7c9cce38e6426126d33afbc.setContent(html_756d3b6c47040263752dd10f3c53b6de);
+            
+        
+
+        marker_0bd6031476e12f5da746fe48106a6971.bindPopup(popup_0c64d22cc7c9cce38e6426126d33afbc)
+        ;
+
+        
+    
+    
+            marker_0bd6031476e12f5da746fe48106a6971.bindTooltip(
+                `<div>
+                     Arlington: 2.25" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bd6031476e12f5da746fe48106a6971.setIcon(icon_6f901a712ea12fa5ac08909aac11894c);
+            
+    
+            var marker_3f99e6b08bdab55f9fe7eaab9ade4541 = L.marker(
+                [32.9, -97.2],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_b0eab4a3114fef2e6d738d5c9069d662 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f936934c08a7c45c43367ca5838e2c97 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a4f079ad855c619b53d575951e5350ff = $(`<div id="html_a4f079ad855c619b53d575951e5350ff" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> North Richland Hills<br>         <b>📮 Zip:</b> 76182<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.9,-97.2&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_f936934c08a7c45c43367ca5838e2c97.setContent(html_a4f079ad855c619b53d575951e5350ff);
+            
+        
+
+        marker_3f99e6b08bdab55f9fe7eaab9ade4541.bindPopup(popup_f936934c08a7c45c43367ca5838e2c97)
+        ;
+
+        
+    
+    
+            marker_3f99e6b08bdab55f9fe7eaab9ade4541.bindTooltip(
+                `<div>
+                     North Richland Hills: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f99e6b08bdab55f9fe7eaab9ade4541.setIcon(icon_b0eab4a3114fef2e6d738d5c9069d662);
+            
+    
+            var marker_f4300f6c262fa536ef5f51c0ecaa225e = L.marker(
+                [32.86, -97.13],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_08945a632f1d61818fc3a9de42e38a4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18d33471226f1571a446962c3ea76b2e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e351f26fc1226e16283ef1efccaef40e = $(`<div id="html_e351f26fc1226e16283ef1efccaef40e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Bedford<br>         <b>📮 Zip:</b> 76021<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.86,-97.13&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_18d33471226f1571a446962c3ea76b2e.setContent(html_e351f26fc1226e16283ef1efccaef40e);
+            
+        
+
+        marker_f4300f6c262fa536ef5f51c0ecaa225e.bindPopup(popup_18d33471226f1571a446962c3ea76b2e)
+        ;
+
+        
+    
+    
+            marker_f4300f6c262fa536ef5f51c0ecaa225e.bindTooltip(
+                `<div>
+                     Bedford: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4300f6c262fa536ef5f51c0ecaa225e.setIcon(icon_08945a632f1d61818fc3a9de42e38a4f);
+            
+    
+            var marker_908b9d0f2dc1aba0a77c97de4ca02ba3 = L.marker(
+                [32.82, -97.15],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_b8c9814afc043197a622b6b866737acb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86250f8edacdcf3195dbb09fcfc44447 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c913603f52a32a6a47b0221e49b62a6f = $(`<div id="html_c913603f52a32a6a47b0221e49b62a6f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Euless<br>         <b>📮 Zip:</b> 76040<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.82,-97.15&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_86250f8edacdcf3195dbb09fcfc44447.setContent(html_c913603f52a32a6a47b0221e49b62a6f);
+            
+        
+
+        marker_908b9d0f2dc1aba0a77c97de4ca02ba3.bindPopup(popup_86250f8edacdcf3195dbb09fcfc44447)
+        ;
+
+        
+    
+    
+            marker_908b9d0f2dc1aba0a77c97de4ca02ba3.bindTooltip(
+                `<div>
+                     Euless: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_908b9d0f2dc1aba0a77c97de4ca02ba3.setIcon(icon_b8c9814afc043197a622b6b866737acb);
+            
+    
+            var marker_5381dacbf326c4960ef404b3ab4d5878 = L.marker(
+                [32.82, -97.1],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_1e9d9dd877f31f11c9345422e17e3bcd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a06ecc2cd75c941b2910d5aaa7fce23 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7fda608d92e8cc4be10fd30026426a1 = $(`<div id="html_f7fda608d92e8cc4be10fd30026426a1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Fort Worth<br>         <b>📮 Zip:</b> 76040<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.82,-97.1&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_3a06ecc2cd75c941b2910d5aaa7fce23.setContent(html_f7fda608d92e8cc4be10fd30026426a1);
+            
+        
+
+        marker_5381dacbf326c4960ef404b3ab4d5878.bindPopup(popup_3a06ecc2cd75c941b2910d5aaa7fce23)
+        ;
+
+        
+    
+    
+            marker_5381dacbf326c4960ef404b3ab4d5878.bindTooltip(
+                `<div>
+                     Fort Worth: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5381dacbf326c4960ef404b3ab4d5878.setIcon(icon_1e9d9dd877f31f11c9345422e17e3bcd);
+            
+    
+            var marker_74b86b6e1bd8c2b0cef0dcc5f4afc606 = L.marker(
+                [32.82, -97.16],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_eb43b5b3bd09407d3dd97d1a99da927a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77aa9703c462cf2520c25f2fa757681c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_23072908bc3626ca1e55edc7ae45ecd8 = $(`<div id="html_23072908bc3626ca1e55edc7ae45ecd8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Hurst<br>         <b>📮 Zip:</b> 76022<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.82,-97.16&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_77aa9703c462cf2520c25f2fa757681c.setContent(html_23072908bc3626ca1e55edc7ae45ecd8);
+            
+        
+
+        marker_74b86b6e1bd8c2b0cef0dcc5f4afc606.bindPopup(popup_77aa9703c462cf2520c25f2fa757681c)
+        ;
+
+        
+    
+    
+            marker_74b86b6e1bd8c2b0cef0dcc5f4afc606.bindTooltip(
+                `<div>
+                     Hurst: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74b86b6e1bd8c2b0cef0dcc5f4afc606.setIcon(icon_eb43b5b3bd09407d3dd97d1a99da927a);
+            
+    
+            var marker_3cc1e8e2701022b95763610625562c3d = L.marker(
+                [32.83, -97.09],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_7cb829b7fc8631ad7f9680a439f8ea59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08ea0d3b21e706f2d2a2108d8c710605 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d034bc77105447ef892cd6896e79b78 = $(`<div id="html_8d034bc77105447ef892cd6896e79b78" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Euless<br>         <b>📮 Zip:</b> 76040<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.83,-97.09&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_08ea0d3b21e706f2d2a2108d8c710605.setContent(html_8d034bc77105447ef892cd6896e79b78);
+            
+        
+
+        marker_3cc1e8e2701022b95763610625562c3d.bindPopup(popup_08ea0d3b21e706f2d2a2108d8c710605)
+        ;
+
+        
+    
+    
+            marker_3cc1e8e2701022b95763610625562c3d.bindTooltip(
+                `<div>
+                     Euless: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cc1e8e2701022b95763610625562c3d.setIcon(icon_7cb829b7fc8631ad7f9680a439f8ea59);
+            
+    
+            var marker_4d4bdd2ced0cd641870dbdadca1952ad = L.marker(
+                [32.84, -97.14],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_510284d317534d0e48953788fe952368 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83eefc6557d43f8321aa4c0804ce3bd7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2199c2b3ba42e89b29218e7567946230 = $(`<div id="html_2199c2b3ba42e89b29218e7567946230" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Bedford<br>         <b>📮 Zip:</b> 76021<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.84,-97.14&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_83eefc6557d43f8321aa4c0804ce3bd7.setContent(html_2199c2b3ba42e89b29218e7567946230);
+            
+        
+
+        marker_4d4bdd2ced0cd641870dbdadca1952ad.bindPopup(popup_83eefc6557d43f8321aa4c0804ce3bd7)
+        ;
+
+        
+    
+    
+            marker_4d4bdd2ced0cd641870dbdadca1952ad.bindTooltip(
+                `<div>
+                     Bedford: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d4bdd2ced0cd641870dbdadca1952ad.setIcon(icon_510284d317534d0e48953788fe952368);
+            
+    
+            var marker_a0751f355c1793f6f0b213fe0bf8bd08 = L.marker(
+                [32.71, -97.1],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_46864317c9d50b9f9c834ea193ef4e20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db269c49dc1d43c54f2ea9efed3c14f9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc7ee44fd15de6277006d88fce24c453 = $(`<div id="html_bc7ee44fd15de6277006d88fce24c453" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.25"</span><br>         <b>🏘️ City:</b> Arlington<br>         <b>📮 Zip:</b> 76010<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.71,-97.1&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_db269c49dc1d43c54f2ea9efed3c14f9.setContent(html_bc7ee44fd15de6277006d88fce24c453);
+            
+        
+
+        marker_a0751f355c1793f6f0b213fe0bf8bd08.bindPopup(popup_db269c49dc1d43c54f2ea9efed3c14f9)
+        ;
+
+        
+    
+    
+            marker_a0751f355c1793f6f0b213fe0bf8bd08.bindTooltip(
+                `<div>
+                     Arlington: 3.25" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0751f355c1793f6f0b213fe0bf8bd08.setIcon(icon_46864317c9d50b9f9c834ea193ef4e20);
+            
+    
+            var marker_99e93b920c5cc9ac48ad1d0202b18292 = L.marker(
+                [32.69, -97.13],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_4b559c6f151216e277e0de002e969c26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_966604b19a555dcedadcb8457ac8d585 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02a2a8d0caa153310c39e71ec603c8ce = $(`<div id="html_02a2a8d0caa153310c39e71ec603c8ce" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Arlington<br>         <b>📮 Zip:</b> 76015<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.69,-97.13&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_966604b19a555dcedadcb8457ac8d585.setContent(html_02a2a8d0caa153310c39e71ec603c8ce);
+            
+        
+
+        marker_99e93b920c5cc9ac48ad1d0202b18292.bindPopup(popup_966604b19a555dcedadcb8457ac8d585)
+        ;
+
+        
+    
+    
+            marker_99e93b920c5cc9ac48ad1d0202b18292.bindTooltip(
+                `<div>
+                     Arlington: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99e93b920c5cc9ac48ad1d0202b18292.setIcon(icon_4b559c6f151216e277e0de002e969c26);
+            
+    
+            var marker_3ae6167c7a0de75be00e0f5cc1341a58 = L.marker(
+                [32.57, -97.12],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_aeca2dd29c2e9615d65225e86bdfd70c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c94b6e3bb4aefd344c31268506bbe9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c602382ea27c319151e9a8b79bc5d6f4 = $(`<div id="html_c602382ea27c319151e9a8b79bc5d6f4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.1"</span><br>         <b>🏘️ City:</b> Mansfield<br>         <b>📮 Zip:</b> 76063<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.57,-97.12&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_7c94b6e3bb4aefd344c31268506bbe9f.setContent(html_c602382ea27c319151e9a8b79bc5d6f4);
+            
+        
+
+        marker_3ae6167c7a0de75be00e0f5cc1341a58.bindPopup(popup_7c94b6e3bb4aefd344c31268506bbe9f)
+        ;
+
+        
+    
+    
+            marker_3ae6167c7a0de75be00e0f5cc1341a58.bindTooltip(
+                `<div>
+                     Mansfield: 2.1" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ae6167c7a0de75be00e0f5cc1341a58.setIcon(icon_aeca2dd29c2e9615d65225e86bdfd70c);
+            
+    
+            var marker_c94f43c398d24c7ad7260c1ef72a7225 = L.marker(
+                [32.61, -97.11],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_9a40735f1c52ac48644a3177a3a8f7b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fea6086d1ccf48d40fce25d5ebe79218 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c439ca982d44c367ea3f43184e2933a = $(`<div id="html_3c439ca982d44c367ea3f43184e2933a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 27, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Mansfield<br>         <b>📮 Zip:</b> 76001<br>         <b>🗺️ County:</b> TARRANT<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=32.61,-97.11&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_fea6086d1ccf48d40fce25d5ebe79218.setContent(html_3c439ca982d44c367ea3f43184e2933a);
+            
+        
+
+        marker_c94f43c398d24c7ad7260c1ef72a7225.bindPopup(popup_fea6086d1ccf48d40fce25d5ebe79218)
+        ;
+
+        
+    
+    
+            marker_c94f43c398d24c7ad7260c1ef72a7225.bindTooltip(
+                `<div>
+                     Mansfield: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c94f43c398d24c7ad7260c1ef72a7225.setIcon(icon_9a40735f1c52ac48644a3177a3a8f7b6);
+            
+    
+            var marker_0571722c35cff1257cdda324a208d510 = L.marker(
+                [33.02, -97.62],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_71869677ded187ab775e843040b83b2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a01af38e2315f1ba4887cde2d8cba2f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5217db8e9c0073c92866d5ca144cabc8 = $(`<div id="html_5217db8e9c0073c92866d5ca144cabc8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">4.5"</span><br>         <b>🏘️ City:</b> Unknown<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.02,-97.62&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_a01af38e2315f1ba4887cde2d8cba2f3.setContent(html_5217db8e9c0073c92866d5ca144cabc8);
+            
+        
+
+        marker_0571722c35cff1257cdda324a208d510.bindPopup(popup_a01af38e2315f1ba4887cde2d8cba2f3)
+        ;
+
+        
+    
+    
+            marker_0571722c35cff1257cdda324a208d510.bindTooltip(
+                `<div>
+                     Unknown: 4.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0571722c35cff1257cdda324a208d510.setIcon(icon_71869677ded187ab775e843040b83b2f);
+            
+    
+            var marker_f85f6a45526c059fb7df701a41073803 = L.marker(
+                [33.03, -97.61],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_3e20a2625602a37071cccd207eda118a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b018b4cbd4bef4c49049e61def7d164 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54055570b7b78c07ab9b9358dccd82a7 = $(`<div id="html_54055570b7b78c07ab9b9358dccd82a7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.5"</span><br>         <b>🏘️ City:</b> Keeter<br>         <b>📮 Zip:</b> 76023<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.03,-97.61&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_2b018b4cbd4bef4c49049e61def7d164.setContent(html_54055570b7b78c07ab9b9358dccd82a7);
+            
+        
+
+        marker_f85f6a45526c059fb7df701a41073803.bindPopup(popup_2b018b4cbd4bef4c49049e61def7d164)
+        ;
+
+        
+    
+    
+            marker_f85f6a45526c059fb7df701a41073803.bindTooltip(
+                `<div>
+                     Keeter: 2.5" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f85f6a45526c059fb7df701a41073803.setIcon(icon_3e20a2625602a37071cccd207eda118a);
+            
+    
+            var marker_78fe7d4c0327bc185d483f63e90bb626 = L.marker(
+                [33.0, -97.54],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_397875eff1b7f18f629ced3be061f331 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_970b6e71cdc43e76548a4ed4b800c903 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2aa082dd58f1d0a45a443621217ddfd3 = $(`<div id="html_2aa082dd58f1d0a45a443621217ddfd3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Briar<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.0,-97.54&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_970b6e71cdc43e76548a4ed4b800c903.setContent(html_2aa082dd58f1d0a45a443621217ddfd3);
+            
+        
+
+        marker_78fe7d4c0327bc185d483f63e90bb626.bindPopup(popup_970b6e71cdc43e76548a4ed4b800c903)
+        ;
+
+        
+    
+    
+            marker_78fe7d4c0327bc185d483f63e90bb626.bindTooltip(
+                `<div>
+                     Briar: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78fe7d4c0327bc185d483f63e90bb626.setIcon(icon_397875eff1b7f18f629ced3be061f331);
+            
+    
+            var marker_0d5d3d5904d8a1f8d6d2c2a635de97bf = L.marker(
+                [33.05, -97.56],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_a0ad9770ecf73de10edc8d21477b369c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3da0e2c453c241373a480f6e02550296 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8750d9c55c4ca4e3167950a9e0f811ee = $(`<div id="html_8750d9c55c4ca4e3167950a9e0f811ee" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Boyd<br>         <b>📮 Zip:</b> 76023<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.05,-97.56&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_3da0e2c453c241373a480f6e02550296.setContent(html_8750d9c55c4ca4e3167950a9e0f811ee);
+            
+        
+
+        marker_0d5d3d5904d8a1f8d6d2c2a635de97bf.bindPopup(popup_3da0e2c453c241373a480f6e02550296)
+        ;
+
+        
+    
+    
+            marker_0d5d3d5904d8a1f8d6d2c2a635de97bf.bindTooltip(
+                `<div>
+                     Boyd: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d5d3d5904d8a1f8d6d2c2a635de97bf.setIcon(icon_a0ad9770ecf73de10edc8d21477b369c);
+            
+    
+            var marker_ee0198ce60fd4d874ae5febc77fda71d = L.marker(
+                [33.0, -97.48],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_88a2a481e417072a70a031c0c3de1b13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5f1c91f1c7415eb2e05d6dea6bdff89 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e28b18fa13b345d5e9291008198982b2 = $(`<div id="html_e28b18fa13b345d5e9291008198982b2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Newark<br>         <b>📮 Zip:</b> 76071<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.0,-97.48&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_c5f1c91f1c7415eb2e05d6dea6bdff89.setContent(html_e28b18fa13b345d5e9291008198982b2);
+            
+        
+
+        marker_ee0198ce60fd4d874ae5febc77fda71d.bindPopup(popup_c5f1c91f1c7415eb2e05d6dea6bdff89)
+        ;
+
+        
+    
+    
+            marker_ee0198ce60fd4d874ae5febc77fda71d.bindTooltip(
+                `<div>
+                     Newark: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee0198ce60fd4d874ae5febc77fda71d.setIcon(icon_88a2a481e417072a70a031c0c3de1b13);
+            
+    
+            var marker_0a31392d11949d4dc55b28381a959cce = L.marker(
+                [33.05, -97.47],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_1428e71571be3b168b40b75edf45e061 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0fee45ff57341808a66de64a59671f59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0d7b10f38a4bf22d373217ed148207aa = $(`<div id="html_0d7b10f38a4bf22d373217ed148207aa" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 01, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> Rhome<br>         <b>📮 Zip:</b> 76078<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.05,-97.47&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_0fee45ff57341808a66de64a59671f59.setContent(html_0d7b10f38a4bf22d373217ed148207aa);
+            
+        
+
+        marker_0a31392d11949d4dc55b28381a959cce.bindPopup(popup_0fee45ff57341808a66de64a59671f59)
+        ;
+
+        
+    
+    
+            marker_0a31392d11949d4dc55b28381a959cce.bindTooltip(
+                `<div>
+                     Rhome: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a31392d11949d4dc55b28381a959cce.setIcon(icon_1428e71571be3b168b40b75edf45e061);
+            
+    
+            var marker_be4562c974bc047e9c059b3416d8631c = L.marker(
+                [33.05, -97.56],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_4140712fd10cbbac675a5dcff9443158 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_915cc1e42eb5ad611afb4b288125b5c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7faddc81d514c2f54d7b6da976b6ad1e = $(`<div id="html_7faddc81d514c2f54d7b6da976b6ad1e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 08, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">3.0"</span><br>         <b>🏘️ City:</b> Boyd<br>         <b>📮 Zip:</b> 76023<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.05,-97.56&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_915cc1e42eb5ad611afb4b288125b5c3.setContent(html_7faddc81d514c2f54d7b6da976b6ad1e);
+            
+        
+
+        marker_be4562c974bc047e9c059b3416d8631c.bindPopup(popup_915cc1e42eb5ad611afb4b288125b5c3)
+        ;
+
+        
+    
+    
+            marker_be4562c974bc047e9c059b3416d8631c.bindTooltip(
+                `<div>
+                     Boyd: 3.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be4562c974bc047e9c059b3416d8631c.setIcon(icon_4140712fd10cbbac675a5dcff9443158);
+            
+    
+            var marker_b2002160734f0473728c06d9591efed9 = L.marker(
+                [33.13, -97.45],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_ee60e50ce12195aea6312aa713c4c23f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_802e35f88a85d6d36c1e79e217196151 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d279ca9307cf4ba50063258a64a60c32 = $(`<div id="html_d279ca9307cf4ba50063258a64a60c32" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> Apr 08, 2024<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.0"</span><br>         <b>🏘️ City:</b> New Fairview<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.13,-97.45&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_802e35f88a85d6d36c1e79e217196151.setContent(html_d279ca9307cf4ba50063258a64a60c32);
+            
+        
+
+        marker_b2002160734f0473728c06d9591efed9.bindPopup(popup_802e35f88a85d6d36c1e79e217196151)
+        ;
+
+        
+    
+    
+            marker_b2002160734f0473728c06d9591efed9.bindTooltip(
+                `<div>
+                     New Fairview: 2.0" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b2002160734f0473728c06d9591efed9.setIcon(icon_ee60e50ce12195aea6312aa713c4c23f);
+            
+    
+            var marker_543229a52ddf1bb58a804e5f816b46fb = L.marker(
+                [33.16, -97.88],
+                {
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var icon_b45f8ee9d8e9a1468cd458ac4adf4080 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e02758dbfe1f0c51ca0a7124b83798c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ace63f9b4e568dd70a30b127cc04c1b7 = $(`<div id="html_ace63f9b4e568dd70a30b127cc04c1b7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; font-size: 12px; min-width: 250px;">         <h4 style="margin: 5px 0; color: darkred;">⚠️ SEVERE HAIL EVENT</h4>         <hr style="margin: 5px 0;">         <b>📅 Date:</b> May 17, 2025<br>         <b>🎯 Size:</b> <span style="color: darkred; font-weight: bold; font-size: 16px;">2.75"</span><br>         <b>🏘️ City:</b> Runaway Bay<br>         <b>📮 Zip:</b> N/A<br>         <b>🗺️ County:</b> WISE<br>         <hr style="margin: 5px 0;">         <p style="background: #ffe6e6; padding: 5px; border-radius: 3px;">             <b>🏠 HIGH PRIORITY TARGET</b><br>             Likely roof damage - excellent prospect         </p>         <hr style="margin: 5px 0;">         <a href="https://www.google.com/maps?q=33.16,-97.88&z=18" target="_blank">             📍 Open in Google Maps (Street View)         </a>     </div>     </div>`)[0];
+                popup_e02758dbfe1f0c51ca0a7124b83798c2.setContent(html_ace63f9b4e568dd70a30b127cc04c1b7);
+            
+        
+
+        marker_543229a52ddf1bb58a804e5f816b46fb.bindPopup(popup_e02758dbfe1f0c51ca0a7124b83798c2)
+        ;
+
+        
+    
+    
+            marker_543229a52ddf1bb58a804e5f816b46fb.bindTooltip(
+                `<div>
+                     Runaway Bay: 2.75" hail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_543229a52ddf1bb58a804e5f816b46fb.setIcon(icon_b45f8ee9d8e9a1468cd458ac4adf4080);
+            
+    
+            var heat_map_96291d0288a23e1d6dc5db4e33bd796f = L.heatLayer(
+                [[33.17, -96.57, 2.75], [33.11, -96.82, 2.0], [33.04, -96.84, 2.0], [33.09, -96.64, 2.0], [33.06, -96.61, 2.25], [32.64, -96.69, 2.0], [33.0, -97.26, 3.0], [33.09, -97.13, 2.75], [33.06, -97.09, 3.5], [33.12, -97.18, 2.5], [33.09, -97.06, 2.0], [33.12, -97.06, 2.0], [33.18, -96.89, 2.5], [33.18, -96.89, 2.0], [33.05, -97.33, 3.4], [33.09, -97.29, 3.0], [33.0998, -97.2545, 2.5], [33.1, -97.23, 2.0], [33.0767, -97.2066, 3.0], [33.1575, -97.1603, 2.0], [33.02, -97.23, 2.0], [32.46, -96.64, 2.0], [32.44, -96.84, 2.0], [32.41, -97.01, 2.0], [32.35, -96.66, 2.0], [32.45, -98.25, 2.0], [32.39, -97.92, 3.25], [32.39, -97.92, 2.75], [32.36, -97.66, 4.5], [32.2524, -97.5496, 3.0], [32.3209, -97.4486, 3.0], [32.5, -97.53, 2.5], [32.46, -97.38, 2.75], [32.87, -98.42, 2.0], [32.97, -97.69, 2.5], [32.66, -98.04, 2.0], [32.7039, -97.1005, 2.25], [32.9, -97.2, 2.0], [32.86, -97.13, 2.75], [32.82, -97.15, 2.0], [32.82, -97.1, 2.0], [32.82, -97.16, 2.75], [32.83, -97.09, 2.75], [32.84, -97.14, 2.0], [32.71, -97.1, 3.25], [32.69, -97.13, 2.0], [32.57, -97.12, 2.1], [32.61, -97.11, 2.0], [33.02, -97.62, 4.5], [33.03, -97.61, 2.5], [33.0, -97.54, 2.0], [33.05, -97.56, 2.0], [33.0, -97.48, 2.0], [33.05, -97.47, 2.0], [33.05, -97.56, 3.0], [33.13, -97.45, 2.0], [33.16, -97.88, 2.75]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 25,
+}
+            );
+        
+    
+            heat_map_96291d0288a23e1d6dc5db4e33bd796f.addTo(map_8614603618497620da19f29142d9596b);
+        
+    
+            var layer_control_4b12f2da06a1f1271343a613ae38e0cd_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_020fbb532eb164575488a56cc33c55de,
+                },
+                overlays :  {
+                    "Severity Heatmap" : heat_map_96291d0288a23e1d6dc5db4e33bd796f,
+                },
+            };
+            let layer_control_4b12f2da06a1f1271343a613ae38e0cd = L.control.layers(
+                layer_control_4b12f2da06a1f1271343a613ae38e0cd_layers.base_layers,
+                layer_control_4b12f2da06a1f1271343a613ae38e0cd_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_8614603618497620da19f29142d9596b);
+        
+</script>
+</html>
